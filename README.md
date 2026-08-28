@@ -38,8 +38,12 @@ brew upgrade granite-mlx
 ## Uninstalling
 
 ```zsh
-brew uninstall granite-mlx
+HOMEBREW_NO_AUTOREMOVE=1 brew uninstall granite-mlx
 ```
+
+`HOMEBREW_NO_AUTOREMOVE=1` prevents Homebrew from using this uninstall as an
+opportunity to remove other formulae it currently considers orphaned. It does
+not leave any Granite-MLX files installed.
 
 Downloaded model weights are managed separately. To inspect or remove them:
 
