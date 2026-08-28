@@ -15,6 +15,14 @@ class GraniteMlx < Formula
     bin.install_symlink libexec/"granite-mlx"
   end
 
+  def caveats
+    <<~EOS
+      Model weights are downloaded separately on first use. Inspect or manage
+      the model cache with:
+        granite-mlx models list
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/granite-mlx --version")
     assert_match "Run Granite Speech 5.0", shell_output("#{bin}/granite-mlx --help")
