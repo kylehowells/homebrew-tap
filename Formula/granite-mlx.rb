@@ -4,6 +4,7 @@ class GraniteMlx < Formula
   url "https://github.com/kylehowells/Granite-MLX/releases/download/0.1.1/granite-mlx-0.1.1-macos-arm64.tar.gz"
   sha256 "4a2f99758253ac2ae04107fb2e4e18f7008813aea7aac7dac26fe232a8e2ad45"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
 
   depends_on arch: :arm64
   depends_on macos: :sonoma
