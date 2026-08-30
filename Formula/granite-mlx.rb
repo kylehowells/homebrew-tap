@@ -6,7 +6,6 @@ class GraniteMlx < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   depends_on arch: :arm64
-  depends_on "ffmpeg"
   depends_on macos: :sonoma
 
   def install
@@ -20,6 +19,10 @@ class GraniteMlx < Formula
       Model weights are downloaded separately on first use. Inspect or manage
       the model cache with:
         granite-mlx models list
+
+      Granite-MLX decodes supported media with AVFoundation. ffmpeg is an
+      optional fallback for additional formats and can be installed with:
+        brew install ffmpeg
     EOS
   end
 

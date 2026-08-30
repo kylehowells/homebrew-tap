@@ -25,8 +25,10 @@ On first transcription, Granite-MLX downloads its default Q8 speech and
 punctuation checkpoints from Hugging Face and stores them in the model cache
 reported by `granite-mlx models list`.
 
-Granite-MLX requires Apple Silicon and macOS 14 or newer. Homebrew installs
-`ffmpeg` for media formats that AVFoundation cannot decode directly.
+Granite-MLX requires Apple Silicon and macOS 14 or newer. It reads media using
+AVFoundation without additional dependencies. For formats AVFoundation cannot
+decode directly, Granite-MLX will automatically use `ffmpeg` when it is already
+installed. Install that optional fallback separately with `brew install ffmpeg`.
 
 ## Updating
 
